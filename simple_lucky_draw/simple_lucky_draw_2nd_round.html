@@ -3,13 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Lucky Draw for #aomealex Wedding</title>
+<title>#aomealex | lucky draw 2nd round</title>
 <style>
   body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background: url('wedding-background.jpg') no-repeat center center fixed;
+    background: url('wedding-background.jpg') no-repeat center bottom fixed;
     background-size: cover;
     display: flex;
     justify-content: center;
@@ -17,7 +17,7 @@
     height: 100vh;
   }
   .topnav {
-    background-color: #333;
+    background-color: #771f2f;
     overflow: hidden;
     position: fixed;
     width: 100%;
@@ -27,18 +27,21 @@
   .topnav a {
     float: left;
     display: block;
-    color: #f2f2f2;
+    color: #efd4c9;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
     font-size: 17px;
   }
-  .topnav a:hover {
-    background-color: #ddd;
-    color: black;
-  }
   .topnav .icon {
     display: none;
+  }
+  .topnav-centered a {
+    float: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center the text vertically and horizontally */
   }
   @media screen and (max-width: 600px) {
     .topnav a:not(:first-child) {display: none;}
@@ -60,10 +63,7 @@
   }
   .number-display {
     text-align: center;
-    background: rgba(255, 255, 255, 0.8);
     padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     max-width: 300px;
     width: 100%;
     margin-top: 60px; /* Adjusted to not overlap the nav */
@@ -71,24 +71,26 @@
   .number-display h1 {
     margin: 0;
     font-size: 5em;
-    color: #333;
+    color: #771f2f;
+    text-shadow: 0px 0px 18px #efd4c9;
   }
   .label {
     font-size: 1.5em;
-    color: #555;
+    color: #754435;
     margin-bottom: 10px;
+    text-shadow: 0px 0px 2px #efd4c9;
   }
 </style>
 </head>
 <body>
 <div class="topnav" id="myTopnav">
-  <a href="#home" class="active">#aomealex</a>
+  <a href="#home" class="active">#AOMEALEX | LUCKY DRAW 2ND ROUND</a>
   <a href="javascript:void(0);" class="icon" onclick="myFunction()">
     <i class="fa fa-bars"></i>
   </a>
 </div>
 <div class="number-display">
-  <p class="label">2nd round</p>
+  <p class="label">Your lucky number is</p>
   <h1 id="randomNumber">Loading...</h1>
 </div>
 <script>
@@ -101,10 +103,10 @@
     }
   }
   window.onload = function() {
-    var randomNumber = localStorage.getItem('randomNumber_2nd_dsfadfedsfsd');
+    var randomNumber = localStorage.getItem('randomNumber_2nd_sdjkkjashdk');
     if (!randomNumber) {
       randomNumber = Math.floor(Math.random() * 400) + 1;
-      localStorage.setItem('randomNumber_2nd_dsfadfedsfsd', randomNumber);
+      localStorage.setItem('randomNumber_2nd_sdjkkjashdk', randomNumber);
     }
     document.getElementById('randomNumber').textContent = randomNumber;
   };
